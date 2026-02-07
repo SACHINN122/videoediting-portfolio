@@ -24,6 +24,7 @@ nav .logo{
     align-items: center;
     gap: 10px;
     color: rgb(98, 101, 238);
+    cursor: pointer;
 }
 
 nav .about{
@@ -39,7 +40,7 @@ nav .about{
 
 nav .about li:hover{
     transition-duration: 1s ease-in-out;
-    transform: scale(1.2);
+    transform: scale(1.09);
     animation-delay: 0.2s;
     box-shadow: 0 0px 0px 0.3px rgba(0,0,0,0.5);
 }
@@ -77,4 +78,84 @@ nav .about li{
 
   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   color: white;
+}
+
+.main h1{
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.main .intro{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px 150px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.main .bodybutton{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 50px;
+    background: none;
+    height: 45px;    
+}
+
+.main .bodybutton .hirebtn, .main .bodybutton .work{
+    background: rgb(71, 71, 198);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+#skills h2{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.9em;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#skill-heading{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.99em;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.skills-section{
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+
+.skills-card{
+    background: rgb(17, 24, 39); /* transparent */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.001);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.skills-section .skills-grid .skills-card ol{
+    color: rgb(136, 163, 184);
+    text-align: left;
 }
