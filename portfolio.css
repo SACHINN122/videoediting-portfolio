@@ -78,22 +78,3 @@ nav .about li{
   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   color: white;
 }
-
-.button{
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(8px);
-    animation: fadeUp 0.6s ease forwards;
-}
-
-@keyframes fadeUp{
-  to{
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.button:hover{
-    transform: scale(2);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-}
