@@ -10,10 +10,16 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(9, 19, 45);
+    background: rgba(9, 19, 45, 0.7);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     height: 70px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.444);
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+
 }
 nav .logo{
     font-size: 1.5em;
@@ -33,9 +39,13 @@ nav .about{
     gap: 25px;
     list-style: none;
     margin-right: 50px;
-    cursor: pointer;
+    cursor: pointer;   
+}
 
-    
+nav .about li{
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 6px;
 }
 
 nav .about li:hover{
@@ -46,24 +56,18 @@ nav .about li:hover{
 }
 
 nav .about li{
-font-size: 15px;
-padding: 8px 10px;
-border-radius: 6px;
-}
-
-nav .about li{
     background: rgba(118, 106, 106, 0.12);
     backdrop-filter: blur(30px);
     border: 1px solid rgba(255,255,255,0.25);
     border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/*nav .about li:hover{
-    background: linear-gradient(90deg, #1b136e, #4800ff);
-    color: white;
-}*/
-
-
+nav .about li:hover{
+    transform: translate3d(5px);
+    box-shadow:0 0 12px #d0cc4ce1;
+    
+}
 
 #button{
   width: 260px;
@@ -90,7 +94,7 @@ nav .about li{
     text-align: center;
     font-size: 1.2em;
     margin: 20px 150px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .main .bodybutton{
@@ -99,7 +103,27 @@ nav .about li{
     gap: 70px;
     margin-top: 50px;
     background: none;
-    height: 45px;    
+    height: 45px;
+}
+/*animation for hire button */
+.main .bodybutton .hirebtn{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+
+.main .bodybutton .hirebtn:hover{
+    transform: translateY(-3px);
+    box-shadow:
+    0 0 12px rgb(98, 101, 238),
+    0 10px 25px rgba(0,0,0,0.4);
+}
+/*animation for work button */
+.main .bodybutton .work:hover{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+
+.main .bodybutton .work:hover{
+    transform: translateY(-3px);
+    box-shadow:
+    0 0 12px rgb(98, 101, 238),
+    0 10px 25px rgba(0,0,0,0.4);
 }
 
 .main .bodybutton .hirebtn, .main .bodybutton .work{
@@ -139,23 +163,75 @@ nav .about li{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
+    transition: 0.3s;
 }
-
 
 .skills-card{
     background: rgb(17, 24, 39); /* transparent */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.001);
-
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border: 1px solid rgb(17, 24, 39);
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 10, 0.03);
     color: rgb(255, 255, 255);
     padding: 20px;
 }
 
+.skills-card:hover{
+    transform: translateY(-6px);
+    border-color: rgb(24, 192, 214);
+}
 .skills-section .skills-grid .skills-card ol{
     color: rgb(136, 163, 184);
     text-align: left;
+    transition: 0.3s ease-in-out;
+}
+
+/*animation for list items in project section */
+
+.project h2{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.project{
+    padding: 80px 10%;
+    text-align: center;
+}
+.project-grid{
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.project-card{
+    background: rgb(17, 24, 39); /* transparent */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgb(17, 24, 39);
+    transition: 0.3s;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 10, 0.03);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+.project-card:hover{
+    transform: translateY(-6px);
+    border-color: rgb(78, 72, 205);
+}
+.project-card p{
+    color: rgb(136, 163, 184);
+    text-align: left;
+}
+.project-card h3{
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
 }
